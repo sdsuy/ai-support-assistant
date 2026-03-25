@@ -6,6 +6,7 @@ export class AiService {
     private apiKey = process.env.OPENAI_API_KEY;
 
   async classifyIntent(message: string): Promise<string> {
+    // console.log('API KEY:', this.apiKey);
     const prompt = `
     Clasifica la intención del siguiente mensaje en una de estas categorías:
     - soporte

@@ -8,6 +8,7 @@ export class ChatController {
 
   @Post()
   async chat(@Body() dto: ChatDto) {
-    return this.chatService.processMessage(dto.message);
+    // console.log('DTO:', dto);
+    return this.chatService.processMessage(dto?.message);
   }
 }
